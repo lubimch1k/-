@@ -1,0 +1,12 @@
+pip install django
+django-admin startproject NeW_NEWS
+cd NeW_NEWS
+django-admin startapp news
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+python manage.py createsuperuser
+name: XASANCHIK
+email: xasan01@mail.com
+Password: xasan0001
+y

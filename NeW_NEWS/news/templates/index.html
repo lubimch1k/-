@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Новости</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+        .news { border-bottom: 1px solid #ccc; padding: 10px 0; }
+        .news:last-child { border: none; }
+        .title { font-size: 1.5em; color: #333; }
+        .date { font-size: 0.9em; color: gray; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Актуальные Новости</h1>
+        {% for article in articles %}
+            <div class="news">
+                <div class="title">{{ article.title }}</div>
+                <div class="date">{{ article.date }}</div>
+                <p>{{ article.content }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    {% if article.image %}
+    <img src="{{ article.image.url }}" alt="Изображение" width="300">
+{% endif %}
+<a href="/register/" class="top-right">Регистрация</a>
+
+<style>
+.top-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+</style>
+</body>
+</html>
