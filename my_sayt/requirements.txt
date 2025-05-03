@@ -1,0 +1,13 @@
+pip install django
+django-admin startproject my_sayt
+cd my_sayt
+django-admin startapp index
+python manage.py runserver
+pip install pillow
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+name: XASANCHIK
+email: xasan01@mail.com
+Password: xasan0001
+y
